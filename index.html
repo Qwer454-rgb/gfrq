@@ -17,11 +17,34 @@
         <input type="text" id="taskInput" placeholder="添加新任务..." maxlength="100" autocomplete="off" />
         <button id="addBtn">添加</button>
       </div>
+      <div class="input-meta">
+        <select id="priorityInput" title="优先级">
+          <option value="low">低</option>
+          <option value="medium" selected>中</option>
+          <option value="high">高</option>
+        </select>
+        <select id="categoryInput" title="分类">
+          <option value="work">工作</option>
+          <option value="life" selected>生活</option>
+          <option value="study">学习</option>
+          <option value="other">其他</option>
+        </select>
+        <input type="date" id="dueDateInput" title="截止日期" />
+      </div>
+
       <div class="filters">
         <button class="filter-btn active" data-filter="all">全部</button>
         <button class="filter-btn" data-filter="active">未完成</button>
         <button class="filter-btn" data-filter="done">已完成</button>
       </div>
+      <div class="filters category-filters">
+        <button class="cat-btn active" data-cat="all">全部分类</button>
+        <button class="cat-btn" data-cat="work">工作</button>
+        <button class="cat-btn" data-cat="life">生活</button>
+        <button class="cat-btn" data-cat="study">学习</button>
+        <button class="cat-btn" data-cat="other">其他</button>
+      </div>
+
       <ul id="taskList"></ul>
       <div class="footer">
         <span id="taskCount">0 项未完成</span>
