@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>任务管理</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>任务管理</h1>
+      <p class="subtitle">保持专注，完成每一件事</p>
+    </header>
+    <main>
+      <div class="input-area">
+        <input type="text" id="taskInput" placeholder="添加新任务..." maxlength="100" autocomplete="off" />
+        <button id="addBtn">添加</button>
+      </div>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="active">未完成</button>
+        <button class="filter-btn" data-filter="done">已完成</button>
+      </div>
+      <ul id="taskList"></ul>
+      <div class="footer">
+        <span id="taskCount">0 项未完成</span>
+        <button id="clearDone">清除已完成</button>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
